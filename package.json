@@ -1,6 +1,7 @@
 {
     "name": "kasa-weather",
     "version": "0.0.1",
+    "main": "index.js",
     "description": "a small weather app",
     "license": "MIT",
     "engines": {
