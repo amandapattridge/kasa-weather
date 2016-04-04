@@ -1,0 +1,15 @@
+{
+    "name": "kasa-weather",
+    "version": "0.0.1",
+    "description": "a small weather app",
+    "license": "MIT",
+    "engines": {
+        "node": "0.12"
+    },
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "express": "~3.4.7",
+    }
+}
