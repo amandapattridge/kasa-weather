@@ -10,6 +10,6 @@
         "start": "node index.js"
     },
     "dependencies": {
-        "express": "~3.4.7",
+        "express": "~3.4.7"
     }
 }
