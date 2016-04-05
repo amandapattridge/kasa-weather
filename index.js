@@ -16,7 +16,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/', function(req, res){
-  // res.send("Hello")
+  // res.send("Hello" )
   // var zip = req.body.zip;
   // var data;
   // app.get('//api.openweathermap.org/data/2.5/weather?q='+zip+'&units=imperial&APPID=5108ea3af1fe4418cd038843b7e3cf53', function(req, res){
