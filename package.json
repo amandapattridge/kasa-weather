@@ -12,6 +12,8 @@
     },
     "dependencies": {
         "express": "~3.4.7",
-        "ejs": "~0.8.5"
+        "ejs": "~0.8.5",
+        "body-parser": "^1.5.2",
+        "express-promise": "0.0.4"
     }
 }
