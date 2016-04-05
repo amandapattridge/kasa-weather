@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Kasa</title>
+  <meta charset="UTF-8">
+  <title>Kasa</title>
+  <!-- <script src="../client/app.js"></script> -->
+  <script   src="https://code.jquery.com/jquery-1.12.2.min.js"   integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="   crossorigin="anonymous"></script>
 </head>
 <body>
-	We're in the body page!
+  <form method="post"> 
+    <input id="zip" type="text" name="zip" placeholder="Enter city name/zip code" />
+    <button type="submit">Enter</button>
+  </form>
+  <div id=results>
+    <h3></h3>
+  </div>
+  <script>
+    var getWeather = function(loc, cb){
+      $.get('http://api.openweathermap.org/data/2.5/weather?q='+loc+'&units=imperial&APPID=5108ea3af1fe4418cd038843b7e3cf53', function(results){
+        // console.log(results);
+        if(cb){
+          cb(results);
+        }
+      });
+    };
+    $('button').on('click', function(e){
+      var location = $('#zip').val();
+        getWeather(location, function(data){
+          console.log(data);
+          $('#results').empty()
+          $('#results').append('<h4>'+data.name+'</h4>');
+          $('#results').append('<div id="condition"><h5>'+data.weather[0].description+'</h5></div>')
+          $('#results').append('<div id="temp"> Temp: '+data.main.temp+' F</div>')
+          $('#results').append('<div id="wind"> Wind: '+data.wind.speed+' mph</div>')
+          $('#results').append('<div id="humidity"> Humidity: '+data.main.humidity+'%</div>')
+        });
+    });
+    // var getWeather = function(url, cb){
+    //  var queryUrl = "http://api.openweathermap.org/data/2.5/weather?q="+loc+"&units=imperial";
+    //  $.get(url, function(results){
+    //     console.log(results);
+    //  });
+    // };
+
+    // var loc = $('#zip').val();
+    // $('button').on('click', function(){
+    //  getWeather(loc);
+    //  console.log(loc);
+    // });
+  </script>
 </body>
 </html>
