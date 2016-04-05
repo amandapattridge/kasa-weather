@@ -16,7 +16,7 @@
   </div>
   <script>
     var getWeather = function(loc, cb){
-      $.get('http://api.openweathermap.org/data/2.5/weather?q='+loc+'&units=imperial&APPID=5108ea3af1fe4418cd038843b7e3cf53', function(results){
+      $.get('//api.openweathermap.org/data/2.5/weather?q='+loc+'&units=imperial&APPID=5108ea3af1fe4418cd038843b7e3cf53', function(results){
         // console.log(results);
         if(cb){
           cb(results);
