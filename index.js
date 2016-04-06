@@ -10,6 +10,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.use("/client", express.static(__dirname + '/client'));
+app.use("/assets", express.static(__dirname + '/assets'));
 app.use("/bower_components", express.static(__dirname + '/bower_components'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -44,7 +45,7 @@ app.post('/', function(req, res){
       var temp = response.body.main.temp;
       var humidity = response.body.main.humidity;
       var wind = response.body.wind.speed;
-      res.render('results.ejs', {'place': place, 'wind': wind, 'humidity': humidity, 'temp': temp})
+      res.render('results.ejs', {'place': place, 'wind': wind, 'humidity': humidity, 'temp': temp});
   });
 });
 

@@ -3,55 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Kasa</title>
-  <script src="./bower_components/jquery/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="../assets/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+  <!-- <script src="./bower_components/jquery/jquery.js"></script> -->
   <script src="../client/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-  <form method='post'> 
-    <input id="zip" type="text" name="zip" placeholder="Enter city name/zip code" />
-    <button type="submit">Enter</button>
-  </form>
-  <div id=results>
-    <h3><%= place %></h3>
-    <div>Temperature: <%= temp %> F</div>
-    <div>Humidity: <%= humidity %> %</div>
-    <div>Wind: <%= wind %> mph</div>
+  <div id="wrapper">
+    <div id=results>
+      <h3><%= place %></h3>
+      <div class="data">Temperature: <%= temp %> F</div>
+      <div class="data">Humidity: <%= humidity %> %</div>
+      <div class="data">Wind: <%= wind %> mph</div>
+    </div>
+    <form method='post'> 
+      <input id="zip" type="text" name="zip" placeholder="Enter city name/zip code" />
+      <button type="submit">Enter</button>
+    </form>
   </div>
-  <script>
-    // getWeatherOnClick()
-  </script>
-    <!-- // var getWeather = function(loc, cb){
-    //   $.getJSON('//api.openweathermap.org/data/2.5/weather?q='+loc+'&units=imperial&APPID=5108ea3af1fe4418cd038843b7e3cf53').then(function(results){
-    //     // console.log(results);
-    //     console.log(results);
-    //     if(cb){
-    //       cb(results);
-    //     }
-    //   });
-    // };
-    // $('button').on('click', function(e){
-    //   var location = $('#zip').val();
-    //     getWeather(location, function(data){
-    //       console.log(data);
-    //       $('#results').empty()
-    //       $('#results').append('<h4>'+data.name+'</h4>');
-    //       $('#results').append('<div id="condition"><h5>'+data.weather[0].description+'</h5></div>')
-    //       $('#results').append('<div id="temp"> Temp: '+data.main.temp+' F</div>')
-    //       $('#results').append('<div id="wind"> Wind: '+data.wind.speed+' mph</div>')
-    //       $('#results').append('<div id="humidity"> Humidity: '+data.main.humidity+'%</div>')
-    //     });
-    // });
-    // var getWeather = function(url, cb){
-    //  var queryUrl = "http://api.openweathermap.org/data/2.5/weather?q="+loc+"&units=imperial";
-    //  $.get(url, function(results){
-    //     console.log(results);
-    //  });
-    // };
-
-    // var loc = $('#zip').val();
-    // $('button').on('click', function(){
-    //  getWeather(loc);
-    //  console.log(loc);
-    // }); -->
 </body>
 </html>
