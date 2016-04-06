@@ -1,4 +1,4 @@
-var $ = require("jquery");
+// var $ = require("jquery");
 
 var weatherFuncs = {
   getWeather: function(loc, cb){
@@ -27,4 +27,4 @@ var weatherFuncs = {
   }
 };
 
-module.exports = weatherFuncs
+// module.exports = weatherFuncs
