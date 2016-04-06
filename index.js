@@ -45,7 +45,8 @@ app.post('/', function(req, res){
       var temp = response.body.main.temp;
       var humidity = response.body.main.humidity;
       var wind = response.body.wind.speed;
-      res.render('results.ejs', {'place': place, 'wind': wind, 'humidity': humidity, 'temp': temp});
+      var description = response.body.weather[0].description
+      res.render('results.ejs', {'place': place, 'wind': wind, 'humidity': humidity, 'temp': temp, 'description': description});
   });
 });
 

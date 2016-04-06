@@ -1,4 +1,8 @@
-#wrapper {margin: 0 auto; width: 600px; font-family: 'Open Sans'}
+body {background-image: url('clear-sky.jpeg');}
+
+.invisible{visibility: hidden;}
+
+#wrapper {margin: 0 auto; width: 600px; font-family: 'Open Sans'; background-color: #FFF;}
 
 button, input, #results {display: block; margin: 20px auto;}
 input {width: 200px; line-height: 20px;}

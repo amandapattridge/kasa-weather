@@ -17,11 +17,27 @@
       <div class="data">Temperature: <%= temp %> F</div>
       <div class="data">Humidity: <%= humidity %> %</div>
       <div class="data">Wind: <%= wind %> mph</div>
+      <div class="invisible"><%= description %></div>
     </div>
     <form method='post'> 
       <input id="zip" type="text" name="zip" placeholder="Enter city name/zip code" />
       <button type="submit">Enter</button>
     </form>
   </div>
+  <script>
+    var condition = $('.invisible').text()
+    if(condition === 'clear sky'){
+      $('body').css('background-image', 'url("../assets/clear-sky.jpeg")')
+    }
+    if(condition === 'haze' || condition === 'mist'){
+      $('body').css('background-image', 'url("../assets/mist.jpg")')
+    }
+    if(condition === 'snow'){
+      $('body').css('background-image', 'url("../assets/snow.jpg")')
+    }
+    if(condition === 'overcast clouds' || condition === 'broken clouds'){
+      $('body').css('background-image', 'url("../assets/broken-clouds.jpg")')
+    }
+  </script>
 </body>
 </html>
